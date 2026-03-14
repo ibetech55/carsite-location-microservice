@@ -36,7 +36,7 @@ export class Services {
     return mappedData;
   }
 
-  getZipCode(zipCode: string): ZipCode {
+  getZipCode(zipCode: string): any {
     const states = [
       { name: 'Alabama', abbreviation: 'AL' },
       { name: 'Alaska', abbreviation: 'AK' },
