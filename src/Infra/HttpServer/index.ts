@@ -34,7 +34,7 @@ class HttpServer {
   // }
 
   listen() {
-    this.app.listen(process.env.PORT, () => console.log("Listening to 5010"));
+  this.app.listen(process.env.PORT, () => console.log(`Listening on port ${process.env.PORT}`));
   }
 
   middlewares() {
