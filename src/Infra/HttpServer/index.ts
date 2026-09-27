@@ -11,7 +11,6 @@ import { apiRoutes } from "../../Routes";
 
 class HttpServer {
   app: express.Express;
-  private corsOrigins = ["http://localhost:4200", "http://localhost:5173", "http://localhost:5001"];
   constructor() {
     this.app = express();
     this.middlewares();
@@ -68,9 +67,6 @@ class HttpServer {
 
   defaultHeaders() {
     this.app.use((req, res, next) => {
-      // const origin = this.corsOrigins.includes(req.header("origin"))
-      //   ? req.headers.origin
-      //   : null;
       res.setHeader("Access-Control-Allow-Credentials", "true");
       res.setHeader("Access-Control-Allow-Origin", "*");
       res.setHeader(

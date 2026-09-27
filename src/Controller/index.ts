@@ -33,4 +33,8 @@ export class Controller {
     const data = this._services.getLatLongByZipCode(request.params.zipCode);
     return response.status(200).json(data);
   }
+
+  async healthcheck(request: Request, response: Response) {
+    return response.status(200).json({success:true});
+  }
 }

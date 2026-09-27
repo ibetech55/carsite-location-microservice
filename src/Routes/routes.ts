@@ -2,6 +2,7 @@ import { Router } from "express";
 import { controller } from "../Container.ts";
 
 const routes = Router();
+routes.get("/healthcheck", (req, res) => controller.healthcheck(req, res));
 routes.get("/states", (req, res) => controller.getStates(req, res));
 routes.get("/countries", (req, res) => controller.getCountries(req, res));
 routes.get("/cities/:stateCode", (req, res) => controller.getCities(req, res));
